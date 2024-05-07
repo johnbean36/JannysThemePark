@@ -6,7 +6,7 @@ const { PORT } = process.env;
 const express = require("express");
 const app = express();
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true}));
 const ticketsRouter = require('./routes/tickets');
 app.use(express.json());
 app.use(cors());

@@ -7,3 +7,7 @@ const TicketSchema = new Schema({
     date: {type: Date, default: Date.now},
     pass: String
 },{timestamps: true})
+
+const Ticket = mongoose.model('Ticket', TicketSchema);
+
+module.exports = Ticket;
