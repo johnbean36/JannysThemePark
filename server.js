@@ -13,6 +13,9 @@ app.use(cors());
 app.use(morgan("dev"));
 
 app.use('/tickets', ticketsRouter)
+app.use('/', (req, res) =>{
+    res.status(403).send('Not Found');
+})
 
 app.listen(PORT, ()=> console.log(`listening on PORT ${PORT}`));
 
